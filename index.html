@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Best Website</title>
+
+<style>
+body {
+  background-image: url("space.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#defaultBlock {
+  padding: 20px;
+}
+
+div {
+  float: left;
+  height: 700px;   
+  width: 750px;    
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#block1 {
+  background-color: rgba(255, 153, 153, 0.9);
+  overflow: auto;
+}
+
+#block2 {
+  background-color: rgba(153, 204, 255, 0.9);
+  width: 350px;
+}
+
+#block3 {
+  background-color: rgba(153, 255, 153, 0.9);
+  width: 350px;
+}
+
+h2 {
+  text-align: center;
+}
+
+main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#block2 img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#block3 iframe {
+  width: 100%;
+  height: 400px;
+}
+</style>
+</head>
+
+<body>
+
+<main id="defaultBlock">
+  <h2>Main Page Title</h2>
+
+  <div id="block1">
+    <h2>Stocks</h2>
+    <div class="tradingview-widget-container" style="height:100%;width:100%">
+      <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" target="_blank">
+          AAPL stock chart
+        </a>
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+      {
+        "symbol": "NASDAQ:AAPL",
+        "interval": "D",
+        "theme": "dark",
+        "autosize": true
+      }
+      </script>
+    </div>
+  </div>
+
+  <div id="block2">
+    <h2>Smart and Handsome Monkey</h2>
+    <img src="Howler Monk.jpg" alt="Howler Monk">
+  </div>
+
+  <div id="block3">
+    <h2>Callander</h2>
+    <iframe src="https://calendar.google.com/calendar/embed?src=c_classroomcff5042c%40group.calendar.google.com&ctz=America%2FToronto" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+</main>
+
+</body>
+</html>
